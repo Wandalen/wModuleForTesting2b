@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wModuleForTesting2b.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wModuleForTesting2b.out.will.yml: &ref_0
+    hash: 665fc23358eb794de51a48dfb9a36522
+    size: 38539
+  ../.ex.will.yml: &ref_1
     hash: e2a314266c82e58319fcc131be41d361
     size: 1861
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: f08513c36d7748c5d78e72b60e43bd41
     size: 4963
 module:
@@ -18,20 +21,20 @@ module:
         with another purpose.
       enabled: 1
       version: 0.0.1
-      interpreters: &ref_2
+      interpreters:
         - njs >= 8.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - willbe
         - test
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@willbe.so>
         - Kryvoruchko Dmytro <dm.vict.kr@gmail.com>
       npm.name: wmodulefortesting2b
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -160,7 +163,6 @@ module:
           - ../proto/dwtools/abase/l2
           - ../proto/dwtools/abase/l2/Include.s
           - ../proto/dwtools/abase/l2/l2
-          - ../proto/dwtools/abase/l2/l2/.ModuleForTesting2b.s.swp
           - ../proto/dwtools/abase/l2/l2/ModuleForTesting2b.s
           - ../proto/dwtools/abase/l2.test
           - ../proto/dwtools/abase/l2.test/ModuleForTesting2b.test.s
@@ -700,6 +702,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          reflector: 'reflector::exported.proto.export*'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          reflector: 'reflector::exported.files.proto.export*'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -788,8 +808,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wModuleForTesting2b.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wModuleForTesting2b
@@ -799,13 +820,22 @@ module:
         with another purpose.
       enabled: 1
       version: 0.0.1
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 8.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - willbe
+        - test
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@willbe.so>
+        - Kryvoruchko Dmytro <dm.vict.kr@gmail.com>
       npm.name: wmodulefortesting2b
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1481,3 +1511,6 @@ module:
       ../.im.will.yml:
         hash: f08513c36d7748c5d78e72b60e43bd41
         size: 4963
+      wModuleForTesting2b.out.will.yml:
+        hash: 665fc23358eb794de51a48dfb9a36522
+        size: 38539
