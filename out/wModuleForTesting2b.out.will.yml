@@ -3,13 +3,13 @@ root:
   - wModuleForTesting2b.out
 consistency:
   wModuleForTesting2b.out.will.yml: &ref_0
-    hash: 665fc23358eb794de51a48dfb9a36522
-    size: 38539
+    hash: f84c3b01a5eed2f3a43ec8394cf25d9b
+    size: 38472
   ../.ex.will.yml: &ref_1
     hash: e2a314266c82e58319fcc131be41d361
     size: 1861
   ../.im.will.yml: &ref_2
-    hash: f08513c36d7748c5d78e72b60e43bd41
+    hash: dd65e4336e02c193e3614627ffc6444a
     size: 4963
 module:
   wModuleForTesting2b.out:
@@ -1509,8 +1509,6 @@ module:
         hash: e2a314266c82e58319fcc131be41d361
         size: 1861
       ../.im.will.yml:
-        hash: f08513c36d7748c5d78e72b60e43bd41
+        hash: dd65e4336e02c193e3614627ffc6444a
         size: 4963
-      wModuleForTesting2b.out.will.yml:
-        hash: 665fc23358eb794de51a48dfb9a36522
-        size: 38539
+      wModuleForTesting2b.out.will.yml: *ref_0
