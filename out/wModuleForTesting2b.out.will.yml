@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wModuleForTesting2b.out
 consistency:
-  wModuleForTesting2b.out.will.yml: &ref_0
-    hash: f84c3b01a5eed2f3a43ec8394cf25d9b
-    size: 38472
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: e2a314266c82e58319fcc131be41d361
     size: 1861
-  ../.im.will.yml: &ref_2
-    hash: dd65e4336e02c193e3614627ffc6444a
-    size: 4963
+  ../.im.will.yml: &ref_1
+    hash: 91e23e29b9b9ce0e8ed86367c7cac473
+    size: 4921
 module:
   wModuleForTesting2b.out:
     about:
@@ -21,20 +18,20 @@ module:
         with another purpose.
       enabled: 1
       version: 0.0.1
-      interpreters:
+      interpreters: &ref_2
         - njs >= 8.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - willbe
         - test
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@willbe.so>
         - Kryvoruchko Dmytro <dm.vict.kr@gmail.com>
       npm.name: wmodulefortesting2b
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -167,20 +164,10 @@ module:
           - ../proto/dwtools/abase/l4.test
           - ../proto/dwtools/abase/l4.test/ModuleForTesting2b.test.s
     submodule:
-      wTools:
-        path: 'npm:///wTools'
-        autoExporting: 0
-        enabled: 0
       wModuleForTesting2:
         path: 'npm:///wmodulefortesting2'
         autoExporting: 0
         enabled: 0
-      Self:
-        path: 'hd://..'
-        autoExporting: 0
-        enabled: 0
-        criterion:
-          development: 1
       wTesting:
         path: 'npm:///wTesting'
         autoExporting: 0
@@ -702,24 +689,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          reflector: 'reflector::exported.proto.export*'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          reflector: 'reflector::exported.files.proto.export*'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -808,9 +777,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wModuleForTesting2b.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wModuleForTesting2b
@@ -820,22 +788,13 @@ module:
         with another purpose.
       enabled: 1
       version: 0.0.1
-      interpreters:
-        - njs >= 8.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - willbe
-        - test
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@willbe.so>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@willbe.so>
-        - Kryvoruchko Dmytro <dm.vict.kr@gmail.com>
+      contributors: *ref_4
       npm.name: wmodulefortesting2b
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -945,20 +904,10 @@ module:
           content: prime
         path: '{path::out.*=}/source/Index.s'
     submodule:
-      wTools:
-        path: 'npm:///wTools'
-        autoExporting: 0
-        enabled: 0
       wModuleForTesting2:
         path: 'npm:///wmodulefortesting2'
         autoExporting: 0
         enabled: 0
-      Self:
-        path: 'hd://.'
-        autoExporting: 0
-        enabled: 0
-        criterion:
-          development: 1
       wTesting:
         path: 'npm:///wTesting'
         autoExporting: 0
@@ -1509,6 +1458,5 @@ module:
         hash: e2a314266c82e58319fcc131be41d361
         size: 1861
       ../.im.will.yml:
-        hash: dd65e4336e02c193e3614627ffc6444a
-        size: 4963
-      wModuleForTesting2b.out.will.yml: *ref_0
+        hash: 91e23e29b9b9ce0e8ed86367c7cac473
+        size: 4921
