@@ -9,7 +9,7 @@
 let _ = null;
 
 if( typeof module !== 'undefined' )
-_ = require( './l2/ModuleForTesting2b.s' );
+_ = require( './ModuleForTesting2b.s' );
 
 if( typeof module !== 'undefined' && module !== null )
 module[ 'exports' ].squareRootOfMul = _.squareRootOfMul;
