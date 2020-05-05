@@ -5,7 +5,7 @@
 if( typeof module !== 'undefined' )
 {
 
-  var _ = require( '../l4/Include.s' );
+  var _ = require( '../l4/testing2b/Include.s' );
 
   require( 'wTesting' );
 
@@ -17,7 +17,7 @@ if( typeof module !== 'undefined' )
 // test
 // --
 
-function trivial( test ) 
+function trivial( test )
 {
   test.case = 'square root of positive numbers';
   var got = _.squareRootOfMul( 1, 4 );
