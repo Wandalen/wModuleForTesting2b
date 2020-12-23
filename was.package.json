@@ -23,6 +23,6 @@
     "url" : "https://github.com/Wandalen/wModuleForTesting2b/issues"
   },
   "dependencies" : { "wmodulefortesting2" : "" },
-  "devDependencies" : { "wmodulefortesting2b" : "file:.", "wTesting" : "" },
+  "devDependencies" : { "wmodulefortesting2b" : "file:.", "wTesting" : "", "eslint" : "7.1.0" },
   "keywords" : [ "willbe", "test" ]
 }
