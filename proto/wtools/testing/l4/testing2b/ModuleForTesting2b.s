@@ -19,12 +19,14 @@ function squareRootOfMul()
   return result;
 }
 
+Object.assign( _, { squareRootOfMul } );
+
 // --
 // export
 // --
 
 if( typeof module !== 'undefined' && module !== null )
-module[ 'exports' ].squareRootOfMul = squareRootOfMul;
+module[ 'exports' ] = _;
 
 })();
 
