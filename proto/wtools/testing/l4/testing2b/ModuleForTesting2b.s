@@ -3,10 +3,9 @@
 
 'use strict';
 
+let _;
 if( typeof module !== 'undefined' )
-require( 'wmodulefortesting2' );
-
-let test2 = _global_._test_;
+_ = require( 'wmodulefortesting2' );
 
 // --
 // Routines
@@ -14,22 +13,18 @@ let test2 = _global_._test_;
 
 function squareRootOfMul()
 {
-  let result = test2.mulOfNumbers.apply( this, arguments );
+  let result = _.mulOfNumbers.apply( this, arguments );
   result = Math.sqrt( result );
 
   return result;
 }
-
-//
-
-test2 = Object.assign( test2, { squareRootOfMul } );
 
 // --
 // export
 // --
 
 if( typeof module !== 'undefined' && module !== null )
-module[ 'exports' ] = test2;
+module[ 'exports' ].squareRootOfMul = squareRootOfMul;
 
 })();
 
