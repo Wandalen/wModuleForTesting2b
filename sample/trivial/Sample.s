@@ -1,7 +1,5 @@
-if( typeof module !== 'undefined' )
-require( 'wmodulefortesting2b' );
 
-let _ = _global_._test_;
+let _ = require( 'wmodulefortesting2b' );
 
 var result = _.squareRootOfMul( 1, 2, 8 );
 
