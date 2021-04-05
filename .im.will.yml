@@ -72,9 +72,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - >-
-      /pro/module/wModuleForTesting2b/proto/wtools/testing/l4/testing2b/Include.s
-    - /pro/module/wModuleForTesting2b/proto/node_modules/wmodulefortesting2b
+    - proto/wtools/testing/l4/testing2b/Include.s
+    - proto/node_modules/wmodulefortesting2b
 reflector:
   reflect.proto:
     inherit: predefined.*
