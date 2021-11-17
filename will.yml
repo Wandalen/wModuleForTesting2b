@@ -280,6 +280,6 @@ step:
       content: prime
       debug: release
 submodule:
-  wmodulefortesting2@gamma:
-    path: 'npm:///wmodulefortesting2@gamma'
+  wModuleForTesting2:
+    path: 'npm:///wmodulefortesting2!gamma'
     enabled: 0
