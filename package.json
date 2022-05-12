@@ -1,6 +1,6 @@
 {
   "name": "wmodulefortesting2b",
-  "version": "0.0.176",
+  "version": "0.0.177",
   "engine": "node >= 10.0.0",
   "description": "Module for testing. This module is a test asset and not intended to be used with another purpose.",
   "author": "Kostiantyn Wandalen <wandalen@obox.systems>",
@@ -32,7 +32,7 @@
     "url": "https://github.com/Wandalen/wModuleForTesting2b/issues"
   },
   "dependencies": {
-    "wmodulefortesting2": "alpha"
+    "wmodulefortesting2": "latest"
   },
   "devDependencies": {},
   "keywords": [
